@@ -72,7 +72,7 @@ int main() {
         strncat(conversation, "\nAssistant: ", CONVERSATION_SIZE - strlen(conversation) - 1);
         char payload[CONVERSATION_SIZE];
         memset(payload, 0, CONVERSATION_SIZE);
-        snprintf(payload, CONVERSATION_SIZE, "{\"prompt\":\"%s\",\"max_tokens\":100}", conversation);
+        snprintf(payload, CONVERSATION_SIZE, "{\"prompt\":\"%s\",\"max_tokens\":5}", conversation);
         char* raw_response = send_request("http://localhost:11400/api/generate", payload);
         char* completion = extract_completion(raw_response);
         if (completion) {
