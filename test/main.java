@@ -2,15 +2,15 @@ package console;
 
 import context.ConversationContext;
 import context.Message;
-import extensions.ExtensionsManager;
-import network.LMStudioClient;
+import extensions.extension;
+import network.client;
 import java.util.Scanner;
 
-public class MainConsole {
+public class main {
     public static void main(String[] args) {
-        LMStudioClient client = new LMStudioClient("http://localhost:port/api");
+        client client = new client("http://localhost:port/api");
         ConversationContext conversation = new ConversationContext();
-        ExtensionsManager extensions = new ExtensionsManager();
+        extension extensions = new extension();
 
         Scanner scanner = new Scanner(System.in);
 

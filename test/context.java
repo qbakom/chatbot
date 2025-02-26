@@ -3,7 +3,7 @@ package context;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConversationContext {
+public class context {
     private final List<Message> history = new ArrayList<>();
 
     public void addMessage(Message message) {

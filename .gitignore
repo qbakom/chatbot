@@ -1,3 +1,5 @@
 .vscode/
 *.txt
 *.py
+test-env/
+*.class
