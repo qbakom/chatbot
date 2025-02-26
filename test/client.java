@@ -5,11 +5,11 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class LMStudioClient {
+public class client {
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final String apiEndpoint;
 
-    public LMStudioClient(String apiEndpoint) {
+    public client(String apiEndpoint) {
         this.apiEndpoint = apiEndpoint;
     }
 

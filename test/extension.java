@@ -3,10 +3,10 @@ package extensions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ExtensionsManager {
+public class extension {
     private Map<String, ExtensionCommand> commands = new HashMap<>();
 
-    public ExtensionsManager() {
+    public extension() {
         registerCommands();
     }
 
