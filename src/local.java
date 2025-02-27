@@ -30,14 +30,14 @@ public class local {
             }
 
             // Wysyłamy prompt do LM Studio i wyświetlamy odpowiedź
-            String botResponse = sendRequestToLMStudio(userInput);
+            String botResponse = sendRequest(userInput);
             System.out.println("Bot: " + botResponse + "\n");
         }
         
         scanner.close();
     }
 
-    private static String sendRequestToLMStudio(String prompt) {
+    private static String sendRequest(String prompt) {
         try {
             // Konfiguracja połączenia
             URL url = new URL(API_URL);
@@ -78,7 +78,7 @@ public class local {
             // Prosta ekstrakcja odpowiedzi z JSON-a (ponownie: można użyć dedykowanej biblioteki)
             // Szukamy fragmentu "content" w "choices[0].message"
             String response = responseBuilder.toString();
-            return extractContentFromJson(response);
+            return extractJson(response);
 
         } catch (Exception e) {
             // W razie błędu zwracamy komunikat
@@ -102,7 +102,7 @@ public class local {
      * 
      * Zalecane jest użycie biblioteki JSON w większych projektach.
      */
-    private static String extractContentFromJson(String json) {
+    private static String extractJson(String json) {
         // Szukamy klucza "content"
         // Przykładowa odpowiedź:
         // {
